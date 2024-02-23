@@ -1,5 +1,7 @@
 import axios from "axios";
 import "./style.scss";
+import "./node_modules/leaflet/dist/leaflet.css";
+import "./node_modules/leaflet/dist/leaflet.js";
 let $ip = document.getElementById("ip");
 let $location = document.getElementById("location");
 let $timezone = document.getElementById("timezone");
