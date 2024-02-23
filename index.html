@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="ip address tracker | front end mentor projects"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ip address tracker</title>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
+    </head>
+    <body>
+        <main role="main">
+            <section aria-label="controllers & info" class="controllers">
+                <h1 aria-level="1" aria-label="page heading" role="heading">
+                    IP Address Tracker
+                </h1>
+                <form role="form" aria-label="ip or domain form" id="form">
+                    <input
+                        type="text"
+                        placeholder="Search for any Ip address or domain"
+                        aria-label="input field"
+                        name="ip"
+                    />
+                    <button
+                        role="button"
+                        aria-label="submit button"
+                        type="submit"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="11"
+                            height="14"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill="none"
+                                stroke="#FFF"
+                                stroke-width="3"
+                                d="M2 1l6 6-6 6"
+                            />
+                        </svg>
+                    </button>
+                    <span aria-label="error msg" aria-hidden="true">error</span>
+                </form>
+            </section>
+            <section
+                aria-label="main information about domain or ip"
+                class="main-info"
+            >
+                <ul role="listitem" aria-label="information list">
+                    <li role="listitem" aria-label="specific information">
+                        <h4 aria-level="4" aria-label="ip address heading">
+                            ip address
+                        </h4>
+                        <span aria-label="ip address info" id="ip"
+                            >......
+                        </span>
+                    </li>
+                    <li role="listitem" aria-label="specific information">
+                        <h4 aria-level="4" aria-label="location heading">
+                            location
+                        </h4>
+                        <span id="location" aria-label="location info"
+                            >......
+                        </span>
+                    </li>
+                    <li role="listitem" aria-label="specific information">
+                        <h4 aria-level="4" aria-label="timezone heading">
+                            timezone
+                        </h4>
+                        <span aria-label="timezone info" id="timezone"
+                            >......
+                        </span>
+                    </li>
+                    <li role="listitem" aria-label="specific information">
+                        <h4 aria-level="4" aria-label="isp heading">ISP</h4>
+                        <span aria-label="isp info" id="isp">...... </span>
+                    </li>
+                </ul>
+            </section>
+            <section aria-label="background" class="background">
+                <picture aria-label="background container">
+                    <source
+                        media="(min-width: 767.5px)"
+                        srcset="/pattern-bg-desktop.webp"
+                    />
+                    <img src="/pattern-bg-mobile.webp" alt="pattern" />
+                </picture>
+            </section>
+            <section id="map"></section>
+        </main>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
